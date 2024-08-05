@@ -15,7 +15,7 @@ public interface CommentRepository extends JpaRepository<Comment, Long> {
     Optional<Comment> findByPostAndId(Post post, Long id);
 
     @Query("SELECT COUNT(c) FROM Comment c WHERE c.post.id = :postId")
-    int countCommentsByPostId(@Param("postId") Long postId);
+    int countCommentByPostId(@Param("postId") Long postId);
 
     @Query("SELECT c FROM Comment c WHERE c.parent.id = :parentId AND c.activeStatus <> 'DELETED'")
     List<Comment> findChildrenComments(@Param("parentId") Long parentId);

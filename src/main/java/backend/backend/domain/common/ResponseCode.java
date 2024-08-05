@@ -10,6 +10,8 @@ public enum ResponseCode {
 
     SUCCESS(200, "COM-000", "OK", HttpStatus.OK),
 
+    POS_AUTHENTICATION_FAIL(400, "POS-101", "유저 인증에 실패했습니다.", HttpStatus.BAD_REQUEST),
+
     // 댓글 : CMT
     CMT_AUTHENTICATION_FAIL(400, " CMT-101", "유저 인증에 실패했습니다.", HttpStatus.BAD_REQUEST),
     CMT_NOT_FOUND(400,"CMT_201", "댓글을 찾을 수 없습니다.", HttpStatus.BAD_REQUEST),
